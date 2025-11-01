@@ -1,138 +1,230 @@
-/* ------------------------------
-   BASE STYLES
---------------------------------*/
-body {
-  font-family: 'Open Sans', sans-serif;
+/* === Google Font === */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+
+/* === Global Reset === */
+* {
   margin: 0;
-  background-color: #f7f9fb;
-  color: #222;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ------------------------------
-   HEADER
---------------------------------*/
-header {
-  background-color: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-#course-title {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 600;
+/* === Body Layout === */
+body {
   font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #f3f4f6; /* slightly lighter gray for contrast behind box */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* ------------------------------
-   NAVIGATION
---------------------------------*/
+/* === Header === */
+header {
+  background-color: #1d4d72; /* dark blue tone */
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin: 0;
+}
+
+header span#course-title {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* === Navigation === */
 nav {
+  background-color: #374151; /* slightly lighter gray-blue */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.navigation {
+  list-style: none;
   display: flex;
   justify-content: center;
-  background-color: #2f2f2f;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
 }
 
-nav a {
-  color: #ffffff;
+nav ul.navigation li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+nav ul.navigation a {
+  display: block;
+  padding: 0.9rem 1rem;
+  color: #e5e7eb;
   text-decoration: none;
-  padding: 1rem 1.5rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-nav a:hover {
-  background-color: #f0c000;
-  color: #000;
+nav ul.navigation a:hover {
+  background-color: #facc15; /* yellow hover */
+  color: #111827;
+  text-decoration: none;
 }
 
-/* ------------------------------
-   MAIN CONTENT
---------------------------------*/
+/* === Main Layout (Wrapper Box) === */
 main {
-  max-width: 1100px;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
-  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
 }
 
-/* h1 title */
-main h1 {
+/* Large white box holding all content */
+.content-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  /* equal height columns */
+  align-items: stretch;
+}
+
+/* Page heading (your name) */
+.content-box h1 {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: 1.8rem;
-  color: #003366;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #1f2937;
   margin-bottom: 1rem;
 }
 
-/* ------------------------------
-   CARD DESIGN
---------------------------------*/
-.card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0.6rem;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  background-color: #003366;
-  color: #fff;
-  margin: -1rem -1rem 1rem -1rem;
-  padding: 0.8rem;
-  border-radius: 0.6rem 0.6rem 0 0;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-/* About Me layout */
-.about .content {
+/* === Cards inside main box === */
+section.card {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* ensures both stretch evenly */
 }
 
-.about .text {
-  flex: 1;
-  min-width: 250px;
-  margin-right: 1rem;
+section.card h2 {
+  color: #1f2937;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+section.card hr {
+  width: 50%;
+  border: 1px solid #d1d5db;
+  margin: 0.5rem auto 1rem;
+}
+
+section.card p {
+  font-size: 0.95rem;
+  color: #1f2937;
+  text-align: center;
+  flex-grow: 1; /* helps content fill vertical space evenly */
+}
+
+/* Flag and profile images */
+.flag {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .profile {
   width: 180px;
-  border-radius: 6px;
-  margin-top: 0.5rem;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
 }
 
-.flag {
-  width: 80px;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-  border: 1px solid #ccc;
+/* === Web Dev Resources card === */
+section.card.resources {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
 }
 
-/* ------------------------------
-   FOOTER
---------------------------------*/
-footer {
-  background-color: #003366;
-  color: white;
+section.card.resources h2 {
+  color: #1f2937;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
   text-align: center;
-  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+section.card.resources ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  flex-grow: 1; /* balances height with other card */
+}
+
+section.card.resources li {
+  margin: 0.4rem 0;
+  text-align: center;
+}
+
+section.card.resources a {
+  color: #1d4d72;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+section.card.resources a:hover {
+  color: #facc15;
+}
+
+/* === Footer === */
+footer {
+  background-color: #1f2937;
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem 0;
   font-size: 0.9rem;
 }
 
 footer p {
-  margin: 0.2rem 0;
+  margin: 0.3rem 0;
 }
 
-footer p:last-child {
-  color: #f0c000;
+/* === Responsive === */
+@media (max-width: 768px) {
+  .content-box {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul.navigation li {
+    flex: 1 1 100%;
+  }
+
+  section.card {
+    margin-bottom: 1rem;
+  }
 }
