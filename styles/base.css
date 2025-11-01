@@ -1,0 +1,138 @@
+/* ------------------------------
+   BASE STYLES
+--------------------------------*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #f7f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+header {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2f2f2f;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f0c000;
+  color: #000;
+}
+
+/* ------------------------------
+   MAIN CONTENT
+--------------------------------*/
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* h1 title */
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #003366;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------
+   CARD DESIGN
+--------------------------------*/
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  background-color: #003366;
+  color: #fff;
+  margin: -1rem -1rem 1rem -1rem;
+  padding: 0.8rem;
+  border-radius: 0.6rem 0.6rem 0 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* About Me layout */
+.about .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about .text {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 1rem;
+}
+
+.profile {
+  width: 180px;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.flag {
+  width: 80px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+footer p:last-child {
+  color: #f0c000;
+}

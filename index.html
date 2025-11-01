@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Andrés Rodríguez Serrano</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Your Name | A student webpage featuring course projects, assignments, and web fundamentals practice.">
+  <meta name="author" content="Andrés Rodríguez Serrano">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JavaScript (deferred so it runs after HTML loads) -->
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/andresrodriguezserrano/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p4#p4" target="_blank">Favorite Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Andrés Rodríguez Serrano</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>Hello! My name is Andrés Rodríguez Serrano. I am studying web development and enjoy learning about HTML, CSS, and JavaScript to create interactive and accessible websites.</p>
+    </section>
+
+    <section class="card">
+       <h3>Toledo, Spain</h3>
+          <hr>
+          <p>
+            <img src="images/spainflag.png" alt="Spanish Flag" class="flag">
+            <em>Official Flag of Your Country</em>
+          </p>
+        </div>
+        <img src="images/myprofile.jpg" alt="photo of me" class="profile">
+      </div>
+    </section>
+
+    <section class="card resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+        <li><a href="https://placeholder.com" target="_blank">Image Placeholder</a></li>
+      </ul>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Andrés Rodríguez Serrano | Spain</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Display current year
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    // Display last modified date
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>
