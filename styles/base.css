@@ -1,5 +1,4 @@
-/* === Google Font === */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+/* === Google Font (moved to HTML with <link>) === */
 
 /* === Global Reset === */
 * {
@@ -12,7 +11,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background-color: #f3f4f6; /* slightly lighter gray for contrast behind box */
+  background-color: #f3f4f6;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -21,8 +20,8 @@ body {
 
 /* === Header === */
 header {
-  background-color: #1d4d72; /* dark blue tone */
-  color: white;
+  background-color: #1d4d72;
+  color: #ffffff; /* ✅ contrast fix */
   text-align: center;
   padding: 1.2rem 0;
   margin: 0;
@@ -40,7 +39,7 @@ header span#course-title {
 
 /* === Navigation === */
 nav {
-  background-color: #374151; /* slightly lighter gray-blue */
+  background-color: #374151;
   margin: 0;
   padding: 0;
 }
@@ -62,14 +61,14 @@ nav ul.navigation li {
 nav ul.navigation a {
   display: block;
   padding: 0.9rem 1rem;
-  color: #e5e7eb;
+  color: #f9fafb; /* ✅ lighter text for contrast */
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
 
 nav ul.navigation a:hover {
-  background-color: #facc15; /* yellow hover */
+  background-color: #facc15;
   color: #111827;
   text-decoration: none;
 }
@@ -87,15 +86,13 @@ main {
 .content-box {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   max-width: 1000px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-
-  /* equal height columns */
   align-items: stretch;
 }
 
@@ -114,11 +111,11 @@ section.card {
   background-color: #f9fafb;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%; /* ensures both stretch evenly */
+  height: 100%;
 }
 
 section.card h2 {
@@ -139,7 +136,7 @@ section.card p {
   font-size: 0.95rem;
   color: #1f2937;
   text-align: center;
-  flex-grow: 1; /* helps content fill vertical space evenly */
+  flex-grow: 1;
 }
 
 /* Flag and profile images */
@@ -154,7 +151,7 @@ section.card p {
   height: auto;
   border-radius: 50%;
   margin-top: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 /* === Web Dev Resources card === */
@@ -162,7 +159,7 @@ section.card.resources {
   background-color: #f9fafb;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -182,7 +179,7 @@ section.card.resources ul {
   list-style: none;
   width: 100%;
   padding: 0;
-  flex-grow: 1; /* balances height with other card */
+  flex-grow: 1;
 }
 
 section.card.resources li {
