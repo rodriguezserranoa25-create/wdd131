@@ -1,20 +1,11 @@
-(() => {
-  // Footer dynamic info
-  document.querySelector("#year").textContent = new Date().getFullYear();
-  document.querySelector("#lastModified").textContent = document.lastModified;
+// temples.js
+const menuButton = document.querySelector("#menuButton");
+const nav = document.querySelector("nav");
 
-  // Hamburger menu toggle
-  const menuButton = document.querySelector("#menuButton");
-  const navMenu = document.querySelector("#navMenu");
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("show");
+  menuButton.textContent = nav.classList.contains("show") ? "✖" : "☰";
+});
 
-  menuButton.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-
-    // Change symbol when toggled
-    if (navMenu.classList.contains("show")) {
-      menuButton.textContent = "✕"; // close symbol
-    } else {
-      menuButton.textContent = "☰"; // open symbol
-    }
-  });
-})();
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
