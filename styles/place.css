@@ -1,0 +1,209 @@
+/* --- Global CSS Variables --- */
+:root {
+    /* Spain National Colors: Red (primary), Yellow (accent) */
+    --primary-color: #AA151B; /* Red */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #FDD835; /* Yellow/Gold */
+    --text-color: #333;
+    --background-color: #f4f4f9;
+    --padding-size: 1rem;
+    --max-width: 1200px;
+    --font-family: "Open Sans", sans-serif;
+}
+
+/* --- Base Styles (No Change from previous version, uses variables) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Visual aid matching example images */
+}
+
+/* --- Header & Title --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--padding-size) 0;
+    text-align: center;
+}
+
+#place-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* --- Main Content & Image --- */
+main {
+    flex: 1; 
+    padding: 0 var(--padding-size);
+}
+
+main picture {
+    display: block;
+    margin-bottom: var(--padding-size);
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Data and Weather Sections (Mobile Layout) --- */
+section {
+    background-color: var(--secondary-color);
+    /* Border uses the primary color (Red) */
+    border: 2px solid var(--primary-color);
+    margin-bottom: var(--padding-size);
+    padding: var(--padding-size);
+    border-radius: 5px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.data-list, .weather-list {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.data-list p, .weather-list p {
+    display: table-row;
+    line-height: 2;
+}
+
+.label, .value {
+    display: table-cell;
+    padding-right: 0.5rem;
+}
+
+.label {
+    /* Label text uses the accent color (Yellow/Gold) */
+    font-weight: bold;
+    color: var(--accent-color);
+    /* Adding a subtle drop shadow to make yellow text pop against white background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+/* Mobile Weather Icon (SVG) */
+.mobile-weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem auto 1rem;
+}
+
+.mobile-weather-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.desktop-weather-icon {
+    display: none; /* Hide for mobile */
+}
+
+/* --- Footer --- */
+footer {
+    /* Footer uses the accent color (Yellow/Gold) */
+    background-color: var(--accent-color);
+    color: var(--text-color); /* Change text color for contrast */
+    padding: 0.5rem var(--padding-size);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.footer-separator {
+    margin: 0 0.5rem;
+}
+
+/* --- Wider View Media Query (Tablet/Desktop Layout) --- */
+@media (min-width: 768px) {
+    main {
+        padding: var(--padding-size);
+        display: grid;
+        grid-template-areas:
+            "title title"
+            "data image"
+            "weather image";
+        grid-template-columns: 1fr 2fr;
+        gap: var(--padding-size);
+    }
+
+    #place-title {
+        font-size: 3rem;
+    }
+
+    /* Move image out of grid flow for absolute positioning */
+    main picture {
+        grid-area: image;
+        position: relative;
+        margin: 0;
+    }
+
+    main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Reposition Data and Weather Sections */
+    #data-section {
+        grid-area: data;
+        padding: 1.5rem;
+        z-index: 10;
+        margin-bottom: 0; 
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Border uses the accent color (Yellow/Gold) for variety */
+        border-color: var(--accent-color);
+    }
+
+    #weather-section {
+        grid-area: weather;
+        padding: 1.5rem;
+        z-index: 10;
+        margin-bottom: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Border uses the accent color (Yellow/Gold) for variety */
+        border-color: var(--accent-color);
+    }
+
+    /* Hide Mobile icon and show desktop text/emoticon */
+    .mobile-weather-icon {
+        display: none;
+    }
+    
+    .desktop-weather-icon {
+        display: inline;
+        font-size: 1.5rem;
+        vertical-align: middle;
+        margin-left: 0.5rem;
+    }
+
+    /* Required: Pseudo-element for wider view icon */
+    #weather-section h2::after {
+        content: "💃"; /* A fun, Spain-related emoticon */
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+    
+    /* Center the Data/Weather lists in their containers */
+    #data-section, #weather-section {
+        text-align: left;
+    }
+}

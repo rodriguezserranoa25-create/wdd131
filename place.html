@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spain - The Land of Sun and Sangria</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta name="description" content="A page dedicated to information about Spain, including data and current weather conditions.">
+</head>
+<body>
+    <header>
+        <h1 id="place-title">Spain</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 768px)" srcset="images/madridcityspain.webp" type="image/webp">
+            <img src="images/madridcityspain.webp" alt="A view of the Sagrada Familia in Barcelona, Spain" loading="lazy">
+        </picture>
+
+        <section id="data-section">
+            <h2>Data</h2>
+            <div class="data-list">
+                <p><span class="label">Area:</span> <span class="value">505,992 sq km</span></p>
+                <p><span class="label">Population:</span> <span class="value">47,615,034</span></p>
+                <p><span class="label">Capital:</span> <span class="value">Madrid</span></p>
+                <p><span class="label">Languages:</span> <span class="value">Spanish, Catalan, Galician, Basque</span></p>
+                <p><span class="label">Currency:</span> <span class="value">Euro (€)</span></p>
+                <p><span class="label">Time Zone:</span> <span class="value">UTC+1 (+2 in summer)</span></p>
+                <p><span class="label">Calling Code:</span> <span class="value">+34</span></p>
+                <p><span class="label">Internet TLD:</span> <span class="value">.es</span></p>
+            </div>
+        </section>
+
+        <section id="weather-section">
+            <h2>Weather <span class="desktop-weather-icon" aria-hidden="true">⛅</span></h2>
+            <div class="mobile-weather-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1m9 10a1 1 0 0 1-1 1h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 1 1m-9 9a1 1 0 0 1-1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1-1 1M3 12a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1m14.24-5.66a1 1 0 0 1-.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-.7.29M5.76 18.24a1 1 0 0 1-.7-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1-.7.29m12.48 0a1 1 0 0 1-.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-.7.29M6.47 5.76a1 1 0 0 1 0-1.41l.71-.71a1 1 0 0 1 1.41 1.41L7.88 5.76a1 1 0 0 1-1.41 0M17.5 14a4.5 4.5 0 0 1-8.5-1.92A3 3 0 0 1 6 10a3 3 0 0 1 2.5-2.92A4.5 4.5 0 0 1 17.5 14Z" fill="#FDD835"/></svg>
+            </div>
+            <div class="weather-list">
+                <p><span class="label">Temperature:</span> <span class="value" id="temp">5 °C</span></p>
+                <p><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></p>
+                <p><span class="label">Wind:</span> <span class="value" id="wind-speed">15 km/h</span></p>
+                <p><span class="label">Wind Chill:</span> <span class="value" id="wind-chill-factor">N/A</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Andrés Rodríguez Serrano</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>
