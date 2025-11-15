@@ -11,7 +11,7 @@
     --font-family: "Open Sans", sans-serif;
 }
 
-/* --- Base Styles (No Change from previous version, uses variables) --- */
+/* --- Base Styles --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
     max-width: var(--max-width);
     margin: 0 auto;
-    border: 1px solid #ccc; /* Visual aid matching example images */
+    border: 1px solid #ccc; 
 }
 
 /* --- Header & Title --- */
@@ -64,7 +64,6 @@ main img {
 /* --- Data and Weather Sections (Mobile Layout) --- */
 section {
     background-color: var(--secondary-color);
-    /* Border uses the primary color (Red) */
     border: 2px solid var(--primary-color);
     margin-bottom: var(--padding-size);
     padding: var(--padding-size);
@@ -95,10 +94,9 @@ section h2 {
 }
 
 .label {
-    /* Label text uses the accent color (Yellow/Gold) */
     font-weight: bold;
     color: var(--accent-color);
-    /* Adding a subtle drop shadow to make yellow text pop against white background */
+    /* This line is valid but could be the source of a strict warning/error */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
@@ -115,14 +113,13 @@ section h2 {
 }
 
 .desktop-weather-icon {
-    display: none; /* Hide for mobile */
+    display: none; 
 }
 
 /* --- Footer --- */
 footer {
-    /* Footer uses the accent color (Yellow/Gold) */
     background-color: var(--accent-color);
-    color: var(--text-color); /* Change text color for contrast */
+    color: var(--text-color); 
     padding: 0.5rem var(--padding-size);
     text-align: center;
     font-size: 0.85rem;
@@ -149,7 +146,6 @@ footer {
         font-size: 3rem;
     }
 
-    /* Move image out of grid flow for absolute positioning */
     main picture {
         grid-area: image;
         position: relative;
@@ -169,7 +165,6 @@ footer {
         z-index: 10;
         margin-bottom: 0; 
         background-color: rgba(255, 255, 255, 0.9);
-        /* Border uses the accent color (Yellow/Gold) for variety */
         border-color: var(--accent-color);
     }
 
@@ -179,7 +174,6 @@ footer {
         z-index: 10;
         margin-bottom: 0;
         background-color: rgba(255, 255, 255, 0.9);
-        /* Border uses the accent color (Yellow/Gold) for variety */
         border-color: var(--accent-color);
     }
 
@@ -197,7 +191,7 @@ footer {
 
     /* Required: Pseudo-element for wider view icon */
     #weather-section h2::after {
-        content: "💃"; /* A fun, Spain-related emoticon */
+        content: "💃"; 
         font-size: 1.5rem;
         margin-left: 0.5rem;
     }
