@@ -1,0 +1,162 @@
+/* ===============================
+   GENERAL STYLES
+=============================== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+header {
+  background-color: #4b0082;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* ===============================
+   NAVIGATION
+=============================== */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   HAMBURGER BUTTON
+=============================== */
+#menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Used when JS toggles the menu */
+nav.open {
+  display: flex !important;
+}
+
+/* ===============================
+   MAIN CONTENT
+=============================== */
+main {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   TEMPLE CARDS GRID
+=============================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin: 2rem auto 0;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* ===============================
+   TEMPLE CARD STYLE
+=============================== */
+.temple-card {
+  background: #f9f8ff;
+  border: 1px solid #d8d1eb;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+.temple-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #4b0082;
+}
+
+.temple-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* Temple images */
+.temple-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+footer {
+  background-color: #4b0082;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  #menuButton {
+    display: block;
+  }
+
+  nav {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background-color: #4b0082;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    padding: 0.75rem;
+    display: block;
+  }
+}

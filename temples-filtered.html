@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View different temples dynamically using filters.">
+  <meta name="author" content="Andrés Rodríguez Serrano">
+  <title>Filtered Temples</title>
+
+  <link rel="stylesheet" href="styles/temples-filtered.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Temple Album</h1>
+
+    <button id="menuButton" aria-label="Menu">☰</button>
+
+    <nav id="navMenu">
+      <a id="home">Home</a>
+      <a id="old">Old</a>
+      <a id="new">New</a>
+      <a id="large">Large</a>
+      <a id="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="filter-title">All Temples</h2>
+    <section id="temple-gallery" class="gallery"></section>
+  </main>
+
+  <footer>
+    <p>©<span id="year"></span> Andrés Rodríguez Serrano</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/temples-filtered.js" defer></script>
+</body>
+</html>
