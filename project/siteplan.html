@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan – GoalGear Football Shop</title>
+
+  <!-- Basic CSS applying the chosen color scheme -->
+  <style>
+    :root {
+      --accent: #0066cc;
+      --text: #111111;
+      --bg: #ffffff;
+      --muted: #666666;
+      --border: #dddddd;
+      --font-main: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: .25rem;
+    }
+
+    .color-sample {
+      width: 130px;
+      height: 40px;
+      border-radius: 6px;
+      margin: .5rem 0;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    pre {
+      background: #f7f7f7;
+      border: 1px solid #cccccc;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Website Planning Document</h1>
+
+  <!-- SITE NAME -->
+  <section>
+    <h2>Site Name</h2>
+    <p><strong>GoalGear – Football T-Shirt Shop</strong></p>
+    <p>
+      I chose this name because it represents a brand that focuses on football-related apparel, especially replica 
+      and fan T-shirts. The name is easy to remember and instantly communicates the purpose of the website.
+    </p>
+  </section>
+
+  <!-- SITE PURPOSE -->
+  <section>
+    <h2>Site Purpose</h2>
+    <p>The purpose of the site is to allow visitors to browse a selection of football T-shirts, view product details, and add items to a cart. The website will include dynamic JavaScript elements such as filtering, product detail pages, and a cart system stored in localStorage. A contact form will allow users to send messages.</p>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>“Where can I view all the football T-shirts available?”</li>
+      <li>“How do I add a shirt to my cart and check my total?”</li>
+    </ul>
+  </section>
+
+  <!-- COLOR SCHEME -->
+  <section>
+    <h2>Color Scheme</h2>
+
+    <h3>Main Colors</h3>
+
+    <div class="color-sample" style="background: #0066cc; color: white;">
+      #0066cc
+    </div>
+    <p>Used for headings, buttons, accents, and links.</p>
+
+    <div class="color-sample" style="background: #111111; color: white;">
+      #111111
+    </div>
+    <p>Used for text and high-contrast content.</p>
+
+    <div class="color-sample" style="background: #ffffff; color: black;">
+      #ffffff
+    </div>
+    <p>Used for background and card surfaces.</p>
+
+    <div class="color-sample" style="background: #666666; color: white;">
+      #666666
+    </div>
+    <p>Used for muted text and secondary information.</p>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section>
+    <h2>Typography</h2>
+    <p><strong>Main Font:</strong> system-ui, -apple-system, "Segoe UI", Roboto, sans-serif</p>
+    <ul>
+      <li><strong>Headings:</strong> system-ui</li>
+      <li><strong>Body text:</strong> system-ui</li>
+      <li><strong>Buttons:</strong> system-ui (bold)</li>
+    </ul>
+    <p>This font is clean, readable, and modern, matching a simple e-commerce look.</p>
+  </section>
+
+  <!-- WIREFRAMES -->
+  <section>
+    <h2>Wireframes</h2>
+
+    <h3>Mobile View</h3>
+    <pre>
++---------------------------+
+| LOGO     ☰                |
++---------------------------+
+|  Hero Image               |
+|  Title / Button           |
++---------------------------+
+| Feature Cards (stacked)   |
++---------------------------+
+| Products (1 column)       |
++---------------------------+
+| Footer                    |
++---------------------------+
+    </pre>
+
+    <h3>Desktop View</h3>
+    <pre>
++------------------------------------------------------+
+| LOGO                NAVIGATION                       |
++------------------------------------------------------+
+|         HERO (text left, image right)                |
++------------------------------------------------------+
+|     Feature Cards (3 columns)                        |
++------------------------------------------------------+
+|     Products Grid (3 columns)                        |
++------------------------------------------------------+
+|                       Footer                         |
++------------------------------------------------------+
+    </pre>
+  </section>
+
+  <p>End of site plan.</p>
+
+</body>
+</html>

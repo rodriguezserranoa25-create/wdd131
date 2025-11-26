@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop – GoalGear</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">GoalGear</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Shop</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" aria-live="polite">(0)</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Shop football T-shirts</h1>
+
+    <section class="controls" aria-label="Filters">
+      <div class="control">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Search by team or name">
+      </div>
+      <div class="control">
+        <label for="filter">Filter by type</label>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="replica">Replica</option>
+          <option value="fan">Fan</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="products-grid" class="products-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year-products"></span> GoalGear – Demo project.</p>
+      <p><a href="references.html">References & image credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/products.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

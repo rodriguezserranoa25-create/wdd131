@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoalGear – Football T-Shirts</title>
+  <meta name="description" content="GoalGear is a demo football T-shirt shop built for a WDD131 final project.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">GoalGear</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" aria-live="polite">(0)</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Featured shirts">
+      <div class="container hero-inner">
+        <div>
+          <h1>Football T-shirts for real fans</h1>
+          <p>Replica and fan shirts inspired by your favourite teams. This site is a demo project built with HTML, CSS, and JavaScript.</p>
+          <a class="btn" href="products.html">Browse shirts</a>
+        </div>
+        <figure>
+          <img src="images/hero.jpg" alt="Fans in football shirts cheering" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="container features" aria-label="Site features">
+      <article class="feature-card">
+        <h2>Dynamic product list</h2>
+        <p>Products are loaded from a JavaScript array and rendered into the page using template literals.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Persistent cart</h2>
+        <p>The cart uses <code>localStorage</code> so items stay saved even if you refresh or close the browser.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Responsive & accessible</h2>
+        <p>Mobile-first layout, keyboard-friendly navigation, and colour contrast conscious design.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> GoalGear – Demo project for WDD131.</p>
+      <p><a href="references.html">References & image credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/products.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
