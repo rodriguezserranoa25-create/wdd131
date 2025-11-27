@@ -3,61 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a GoalGear product review including rating, features, and installation date.">
+  <meta name="author" content="Andrés Rodríguez Serrano">
   <title>Product Review Form – GoalGear</title>
-  <link rel="stylesheet" href="css/review.css">
-  <script src="js/products.js" defer></script>
-  <script src="js/review-form.js" defer></script>
+
+  <link rel="stylesheet" href="styles/review.css">
+  <script src="scripts/products.js" defer></script>
+  <script src="scripts/review-form.js" defer></script>
+  <script src="scripts/year.js" defer></script> <!-- externalized year script -->
 </head>
 
 <body>
   <header class="site-header">
-    <h1>GoalGear – Product Review</h1>
+    <h1>Product Review Form</h1>
   </header>
 
   <main class="container">
     <form action="review.html" method="get" class="review-form">
       <h2>Submit Your Review</h2>
 
-      <!-- Product Name (select populated by JS) -->
+      <!-- PRODUCT NAME -->
       <label for="productName">Product Name *</label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Select a Product ...</option>
       </select>
 
-      <!-- Rating (1–5 stars) -->
+      <!-- RATING -->
       <fieldset>
         <legend>Overall Rating *</legend>
         <div class="rating-group">
-          <label><input type="radio" name="rating" value="1" required> ★☆☆☆☆</label>
-          <label><input type="radio" name="rating" value="2"> ★★☆☆☆</label>
-          <label><input type="radio" name="rating" value="3"> ★★★☆☆</label>
-          <label><input type="radio" name="rating" value="4"> ★★★★☆</label>
-          <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+
+          <label for="rate1">
+            <input type="radio" id="rate1" name="rating" value="1" required>
+            ★☆☆☆☆
+          </label>
+
+          <label for="rate2">
+            <input type="radio" id="rate2" name="rating" value="2" required>
+            ★★☆☆☆
+          </label>
+
+          <label for="rate3">
+            <input type="radio" id="rate3" name="rating" value="3" required>
+            ★★★☆☆
+          </label>
+
+          <label for="rate4">
+            <input type="radio" id="rate4" name="rating" value="4" required>
+            ★★★★☆
+          </label>
+
+          <label for="rate5">
+            <input type="radio" id="rate5" name="rating" value="5" required>
+            ★★★★★
+          </label>
+
         </div>
       </fieldset>
 
-      <!-- Installation Date -->
+      <!-- DATE -->
       <label for="installDate">Date of Installation *</label>
       <input type="date" id="installDate" name="installDate" required>
 
-      <!-- Useful Features (checkboxes) -->
+      <!-- FEATURES -->
       <fieldset>
         <legend>Useful Features (check all that apply)</legend>
-        <label><input type="checkbox" id="feat1" name="features" value="Durable"> Durable</label>
-        <label><input type="checkbox" id="feat2" name="features" value="Affordable"> Affordable</label>
-        <label><input type="checkbox" id="feat3" name="features" value="Comfortable"> Comfortable</label>
-        <label><input type="checkbox" id="feat4" name="features" value="High Quality"> High Quality</label>
+
+        <label for="feat1">
+          <input type="checkbox" id="feat1" name="features" value="Durable">
+          Durable
+        </label>
+
+        <label for="feat2">
+          <input type="checkbox" id="feat2" name="features" value="Affordable">
+          Affordable
+        </label>
+
+        <label for="feat3">
+          <input type="checkbox" id="feat3" name="features" value="Comfortable">
+          Comfortable
+        </label>
+
+        <label for="feat4">
+          <input type="checkbox" id="feat4" name="features" value="High Quality">
+          High Quality
+        </label>
       </fieldset>
 
-      <!-- Written Review -->
+      <!-- WRITTEN REVIEW -->
       <label for="review">Written Review (optional)</label>
       <textarea id="review" name="review" rows="5"></textarea>
 
-      <!-- Username (optional) -->
+      <!-- USERNAME -->
       <label for="username">Your Name (optional)</label>
       <input type="text" id="username" name="username">
 
-      <!-- Submit Button -->
+      <!-- SUBMIT -->
       <input type="submit" value="Submit Review" class="btn">
     </form>
   </main>
@@ -65,9 +106,5 @@
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> GoalGear | WDD131 Assignment</p>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
