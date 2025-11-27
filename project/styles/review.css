@@ -91,3 +91,16 @@ textarea {
     padding: 2rem;
   }
 }
+/* Required W05 media query */
+@media (min-width: 600px) {
+  .review-form,
+  .confirmation-box {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .rating-group label {
+    font-size: 1.1rem;
+  }
+}
