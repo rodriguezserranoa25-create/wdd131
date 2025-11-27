@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted – GoalGear</title>
+  <link rel="stylesheet" href="css/review.css">
+  <script src="js/review-confirm.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Review Submitted</h1>
+  </header>
+
+  <main class="container">
+    <section class="confirmation-box">
+      <h2>Thank you for your review!</h2>
+      <p>Your feedback has been recorded.</p>
+
+      <h3>Total Reviews Submitted:</h3>
+      <p id="reviewCount" class="counter"></p>
+
+      <a href="form.html" class="btn">Submit Another Review</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> GoalGear | WDD131 Assignment</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
