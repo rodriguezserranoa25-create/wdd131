@@ -1,5 +1,3 @@
-// review-form.js
-
 window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("productName");
 

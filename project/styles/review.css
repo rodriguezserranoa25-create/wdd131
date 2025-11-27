@@ -67,6 +67,8 @@ textarea {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .site-footer {
@@ -76,14 +78,16 @@ textarea {
   color: var(--muted);
 }
 
-/* MEDIA QUERIES REQUIRED BY RUBRIC */
+.counter {
+  font-size: 1.6rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* REQUIRED MEDIA QUERY */
 @media (min-width: 600px) {
   .review-form,
   .confirmation-box {
     padding: 2rem;
-  }
-
-  .rating-group label {
-    font-size: 1rem;
   }
 }

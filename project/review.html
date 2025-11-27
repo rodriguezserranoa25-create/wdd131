@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review confirmation page showing your submission count.">
+  <meta name="author" content="Andrés Rodríguez Serrano">
   <title>Review Submitted – GoalGear</title>
-  <link rel="stylesheet" href="css/review.css">
-  <script src="js/review-confirm.js" defer></script>
+
+  <link rel="stylesheet" href="styles/review.css">
+  <script src="scripts/review-confirm.js" defer></script>
+  <script src="scripts/year.js" defer></script>
 </head>
 
 <body>
@@ -28,9 +32,5 @@
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> GoalGear | WDD131 Assignment</p>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
